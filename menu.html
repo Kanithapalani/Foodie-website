@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Foodie - Menu</title>
+
+<link rel="stylesheet" href="./style.css">
+```
+
+</head>
+
+<body>
+
+```
+<!-- NAVBAR -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🍴 Foodie
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="menu.html" class="active">Menu</a>
+            </li>
+
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+       <a href="card.html" class="order-btn">
+    🛒 Cart (<span id="cart-count">0</span>)
+</a>
+
+    </nav>
+
+</header>
+
+
+<!-- MENU HERO -->
+
+<section class="menu-hero">
+
+    <div class="menu-hero-content">
+
+        <p>OUR MENU</p>
+
+        <h1>
+            Choose Your Favourite Food
+        </h1>
+
+        <span>
+            Fresh, delicious and made with love.
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section class="menu-section">
+
+    <div class="section-title">
+
+        <p>
+            DELICIOUS CHOICES
+        </p>
+
+        <h2>
+            Explore Our Menu
+        </h2>
+
+        <span>
+            Find something delicious for every craving
+        </span>
+
+    </div>
+
+
+    <!-- CATEGORY BUTTONS -->
+
+    <div class="categories">
+
+        <button class="category active">
+            All
+        </button>
+
+        <button class="category">
+            Pizza
+        </button>
+
+        <button class="category">
+            Burger
+        </button>
+
+        <button class="category">
+            Main Course
+        </button>
+
+        <button class="category">
+            Noodles
+        </button>
+
+        <button class="category">
+            Desserts
+        </button>
+
+    </div>
+
+
+    <!-- FOOD GRID -->
+
+    <div class="menu-container">
+
+
+        <!-- PIZZA -->
+
+        <div class="menu-card" data-category="pizza">
+
+            <div class="menu-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=90"
+                    alt="Cheese Pizza">
+
+            </div>
+
+            <div class="menu-details">
+
+                <h3>
+                    Cheese Pizza
+                </h3>
+
+                <p>
+                    Delicious cheesy pizza with fresh
+                    vegetables and mozzarella.
+                </p>
+
+                <div class="menu-bottom">
+
+                    <strong>
+                        ₹249
+                    </strong>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BURGER -->
+
+        <div class="menu-card" data-category="burger">
+
+            <div class="menu-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=90"
+                    alt="Classic Burger">
+
+            </div>
+
+            <div class="menu-details">
+
+                <h3>
+                    Classic Burger
+                </h3>
+
+                <p>
+                    Juicy chicken burger with fresh
+                    vegetables and special sauce.
+                </p>
+
+                <div class="menu-bottom">
+
+                    <strong>
+                        ₹149
+                    </strong>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHICKEN BURGER -->
+
+        <div class="menu-card" data-category="burger">
+
+            <div class="menu-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=90"
+                    alt="Chicken Burger">
+
+            </div>
+
+            <div class="menu-details">
+
+                <h3>
+                    Chicken Burger
+                </h3>
+
+                <p>
+                    Crispy chicken burger with lettuce,
+                    cheese and creamy sauce.
+                </p>
+
+                <div class="menu-bottom">
+
+                    <strong>
+                        ₹179
+                    </strong>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PASTA -->
+
+        <div class="menu-card" data-category="main-course">
+
+            <div class="menu-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=90"
+                    alt="Creamy Pasta">
+
+            </div>
+
+            <div class="menu-details">
+
+                <h3>
+                    Creamy Pasta
+                </h3>
+
+                <p>
+                    Creamy pasta prepared with herbs,
+                    vegetables and delicious sauce.
+                </p>
+
+                <div class="menu-bottom">
+
+                    <strong>
+                        ₹199
+                    </strong>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BIRYANI -->
+
+        <div class="menu-card" data-category="main-course">
+
+            <div class="menu-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=90"
+                    alt="Chicken Biryani">
+
+            </div>
+
+            <div class="menu-details">
+
+                <h3>
+                    Chicken Biryani
+                </h3>
+
+                <p>
+                    Aromatic basmati rice with tender
+                    chicken and special spices.
+                </p>
+
+                <div class="menu-bottom">
+
+                    <strong>
+                        ₹249
+                    </strong>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- GRILLED CHICKEN -->
+
+        <div class="menu-card" data-category="main-course">
+
+            <div class="menu-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=90"
+                    alt="Grilled Chicken">
+
+            </div>
+
+            <div class="menu-details">
+
+                <h3>
+                    Grilled Chicken
+                </h3>
+
+                <p>
+                    Tender grilled chicken seasoned
+                    with herbs and special spices.
+                </p>
+
+                <div class="menu-bottom">
+
+                    <strong>
+                        ₹299
+                    </strong>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NOODLES -->
+
+        <div class="menu-card" data-category="noodles">
+
+            <div class="menu-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=800&q=90"
+                    alt="Chicken Noodles">
+
+            </div>
+
+            <div class="menu-details">
+
+                <h3>
+                    Chicken Noodles
+                </h3>
+
+                <p>
+                    Hot and spicy noodles with chicken
+                    and fresh vegetables.
+                </p>
+
+                <div class="menu-bottom">
+
+                    <strong>
+                        ₹179
+                    </strong>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FRIED RICE -->
+
+        <div class="menu-card" data-category="main-course">
+
+            <div class="menu-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=90"
+                    alt="Fried Rice">
+
+            </div>
+
+            <div class="menu-details">
+
+                <h3>
+                    Vegetable Fried Rice
+                </h3>
+
+                <p>
+                    Fried rice tossed with fresh vegetables
+                    and delicious seasonings.
+                </p>
+
+                <div class="menu-bottom">
+
+                    <strong>
+                        ₹159
+                    </strong>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TACOS -->
+
+        <div class="menu-card" data-category="main-course">
+
+            <div class="menu-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=800&q=90"
+                    alt="Mexican Tacos">
+
+            </div>
+
+            <div class="menu-details">
+
+                <h3>
+                    Mexican Tacos
+                </h3>
+
+                <p>
+                    Crispy tacos filled with vegetables,
+                    cheese and tasty sauce.
+                </p>
+
+                <div class="menu-bottom">
+
+                    <strong>
+                        ₹159
+                    </strong>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FRENCH FRIES -->
+
+        <div class="menu-card" data-category="main-course">
+
+            <div class="menu-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=90"
+                    alt="French Fries">
+
+            </div>
+
+            <div class="menu-details">
+
+                <h3>
+                    French Fries
+                </h3>
+
+                <p>
+                    Crispy golden fries served with
+                    delicious tomato ketchup.
+                </p>
+
+                <div class="menu-bottom">
+
+                    <strong>
+                        ₹99
+                    </strong>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHOCOLATE CAKE -->
+
+        <div class="menu-card" data-category="desserts">
+
+            <div class="menu-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=90"
+                    alt="Chocolate Cake">
+
+            </div>
+
+            <div class="menu-details">
+
+                <h3>
+                    Chocolate Cake
+                </h3>
+
+                <p>
+                    Soft chocolate cake with creamy
+                    chocolate frosting.
+                </p>
+
+                <div class="menu-bottom">
+
+                    <strong>
+                        ₹129
+                    </strong>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ICE CREAM -->
+
+        <div class="menu-card" data-category="desserts">
+
+            <div class="menu-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=90"
+                    alt="Ice Cream">
+
+            </div>
+
+            <div class="menu-details">
+
+                <h3>
+                    Vanilla Ice Cream
+                </h3>
+
+                <p>
+                    Creamy and delicious vanilla ice cream
+                    served chilled.
+                </p>
+
+                <div class="menu-bottom">
+
+                    <strong>
+                        ₹89
+                    </strong>
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OFFER -->
+
+<section class="offer">
+
+    <div class="offer-content">
+
+        <p>
+            SPECIAL OFFER
+        </p>
+
+        <h2>
+            Get 20% OFF On Your First Order
+        </h2>
+
+        <span>
+            Order your favourite food today
+            and enjoy our special discount.
+        </span>
+
+        <br>
+        <br>
+
+        <a href="menu.html" class="primary-btn">
+            Order Now
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+            🍴 Foodie
+        </div>
+
+        <p>
+            Delicious food delivered with love.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Foodie. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+```
+<script>
+    const categoryButtons = document.querySelectorAll(".category");
+    const menuCards = document.querySelectorAll(".menu-card");
+
+    categoryButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            // Remove active from all buttons
+            categoryButtons.forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            // Add active to clicked button
+            button.classList.add("active");
+
+            const category = button.textContent
+                .trim()
+                .toLowerCase()
+                .replace(" ", "-");
+
+            menuCards.forEach(card => {
+
+                const cardCategory = card.dataset.category;
+
+                if (category === "all" || cardCategory === category) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+
+            });
+
+        });
+
+    });
+</script>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("foodieCart")) || [];
+
+const cartButtons = document.querySelectorAll(".menu-bottom button");
+
+const cartCountDisplay = document.getElementById("cart-count");
+
+
+function updateCartCount() {
+
+    let totalItems = cart.reduce(
+        (sum, item) => sum + item.quantity,
+        0
+    );
+
+    cartCountDisplay.textContent = totalItems;
+}
+
+
+cartButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const card = button.closest(".menu-card");
+
+        const name =
+            card.querySelector(".menu-details h3").textContent.trim();
+
+        const priceText =
+            card.querySelector(".menu-bottom strong").textContent.trim();
+
+        const price =
+            parseInt(priceText.replace("₹", ""));
+
+
+        const existingItem =
+            cart.find(item => item.name === name);
+
+
+        if (existingItem) {
+
+            existingItem.quantity++;
+
+        } else {
+
+            cart.push({
+                name: name,
+                price: price,
+                quantity: 1
+            });
+
+        }
+
+
+        localStorage.setItem(
+            "foodieCart",
+            JSON.stringify(cart)
+        );
+
+
+        updateCartCount();
+
+
+        button.textContent = "Added ✓";
+
+
+        setTimeout(() => {
+
+            button.textContent = "Add to Cart";
+
+        }, 1000);
+
+    });
+
+});
+
+
+updateCartCount();
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie - Checkout</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🍴 Foodie
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="menu.html">Menu</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+            <a href="cart.html" class="order-btn">
+                🛒 Cart
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CHECKOUT HERO -->
+
+    <section class="menu-hero">
+
+        <div class="menu-hero-content">
+
+            <p>CHECKOUT</p>
+
+            <h1>
+                Complete Your Order
+            </h1>
+
+            <span>
+                Enter your details and place your order.
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- CHECKOUT -->
+
+    <section class="checkout-section">
+
+        <div class="checkout-container">
+
+
+            <!-- CUSTOMER DETAILS -->
+
+            <div class="checkout-form">
+
+                <h2>
+                    Delivery Details
+                </h2>
+
+                <form id="checkout-form">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customer-name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="customer-phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+
+
+                    <label>
+                        Delivery Address
+                    </label>
+
+                    <textarea
+                        id="customer-address"
+                        placeholder="Enter your complete address"
+                        rows="4"
+                        required
+                    ></textarea>
+
+
+                    <label>
+                        Payment Method
+                    </label>
+
+                    <select id="payment-method">
+
+                        <option value="Cash on Delivery">
+                            Cash on Delivery
+                        </option>
+
+                        <option value="UPI">
+                            UPI
+                        </option>
+
+                        <option value="Card">
+                            Credit / Debit Card
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        type="submit"
+                        class="checkout-btn">
+                        Place Order
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- ORDER SUMMARY -->
+
+            <div class="checkout-summary">
+
+                <h2>
+                    Order Summary
+                </h2>
+
+                <div id="checkout-items">
+                </div>
+
+                <div class="checkout-total">
+
+                    <span>
+                        Total Amount
+                    </span>
+
+                    <strong id="checkout-total">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                🍴 Foodie
+            </div>
+
+            <p>
+                Delicious food delivered with love.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Foodie. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        const cart =
+            JSON.parse(localStorage.getItem("foodieCart")) || [];
+
+        const checkoutItems =
+            document.getElementById("checkout-items");
+
+        const checkoutTotal =
+            document.getElementById("checkout-total");
+
+
+        let total = 0;
+
+
+        if (cart.length === 0) {
+
+            checkoutItems.innerHTML = `
+                <p>
+                    Your cart is empty.
+                </p>
+            `;
+
+        } else {
+
+            cart.forEach(item => {
+
+                const itemTotal =
+                    item.price * item.quantity;
+
+                total += itemTotal;
+
+
+                checkoutItems.innerHTML += `
+
+                    <div class="checkout-item">
+
+                        <span>
+                            ${item.name} × ${item.quantity}
+                        </span>
+
+                        <strong>
+                            ₹${itemTotal}
+                        </strong>
+
+                    </div>
+
+                `;
+
+            });
+
+        }
+
+
+        checkoutTotal.textContent =
+            "₹" + total;
+
+
+        document
+            .getElementById("checkout-form")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+               localStorage.removeItem("foodieCart");
+
+                window.location.href = "order-success.html";
+
+            });
+
+    </script>
+
+</body>
+
+</html>
